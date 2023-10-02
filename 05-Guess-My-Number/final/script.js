@@ -13,7 +13,7 @@ console.log(document.querySelector('.guess').value);
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
-let highscore = 0;
+let highscore = 19;
 
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
@@ -22,6 +22,9 @@ const displayMessage = function (message) {
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
+  console.log('secretNumber=', secretNumber);
+  console.log('highscore=', highscore);
+  console.log('score=', score);
 
   // When there is no input
   if (!guess) {
